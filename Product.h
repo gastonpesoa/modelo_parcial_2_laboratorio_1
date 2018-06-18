@@ -33,7 +33,7 @@ struct
  * \param productsList (ArrayList*) Pointer to the list of products to be hardcode
  * \return (void)
  */
-void productsList_testing(ArrayList* productsList)
+void productsList_testing(ArrayList* productsList);
 
 
 /** \brief Allocate and set a new product with the values recived as parameters

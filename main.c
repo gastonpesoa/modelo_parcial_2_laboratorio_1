@@ -23,7 +23,7 @@
  *			o temporal.dat: como archivo temporal para utilizar de auxiliar en la baja física; y de auxiliar en la
  *			  generación del archivo datos.dat ordenado luego de aplicar una lista simplemente enlazada.
  *
- *		• Asignación dinámica de memoria: Se realizará una lista simplemente enlazada que lea el archivo datos.dat 
+ *		• Asignación dinámica de memoria: Se realizará una lista simplemente enlazada que lea el archivo datos.dat
  *		  desde el primer registro hasta el último, insertando de este modo cada registro leído (ordenado por el campo
  *		  Descripción de manera descendente) en la lista, por último generar el datos.dat ordenado.
  *
@@ -73,13 +73,15 @@ int main(){
 	//Hardcodeo de productos para testing
 	productsList_testing(productsList);
 
-	//Menu principal
-    int opcionMenuPrincipal = 0;
 
+    int opcionMenuPrincipal = 0;
+    int opcionMenuModificar = 0;
+
+    //Menu principal
     while(opcionMenuPrincipal != 6){
-        
+
         opcionMenuPrincipal = optionMainMenu();
-        
+
         switch(opcionMenuPrincipal){
 
             case 1: //Altas
@@ -117,15 +119,13 @@ int main(){
 			    fwrite(productsList->get(productsList, productIdAux), sizeof(Product), 1, pFile);
 
             	fclose(pFile);
-                
+
                 break; //case 1: Altas
-                
+
             case 2: //Modificar
 
-            	//Menu modificar
-            	int opcionMenuModificar = 0;
-
-            	while(opcionMenuModificar != 4){
+                //Menu modificar
+                	while(opcionMenuModificar != 4){
 
             		opcionMenuModificar = optionModifyMenu();
 
@@ -133,7 +133,7 @@ int main(){
 
             			case 1: // Modificar descripcion
 
-            				 
+
             				break;
             			case 2: // Modificar importe
             				break;
@@ -143,21 +143,21 @@ int main(){
             				continue;
             		} // switch(opcionMenuModificar)
             	} // while(opcionMenuModificar != 4)
-               
+
                 break; // case 2: Modificar
-                
+
             case 3: // Baja logica
 
                 break; // case 3: Baja logica
 
             case 4: // Baja fisica
-                
+
                 break; // case 4: Baja fisica
-                
+
             case 5: // Listar
-                
+
                 break; // case 5: Listar
-                             
+
             case 6: //Salir
                 continue;
         }
