@@ -29,6 +29,13 @@ struct
 #endif // __Product
 
 
+/** \brief Hardcode of data testing of products in a products list recived as parameter.
+ * \param productsList (ArrayList*) Pointer to the list of products to be hardcode
+ * \return (void)
+ */
+void productsList_testing(ArrayList* productsList)
+
+
 /** \brief Allocate and set a new product with the values recived as parameters
  * \param id (int)
  * \param description (char*)
@@ -54,8 +61,8 @@ Product* product_new(void);
  * \param hiLimitId (int) Higher id limit allowed
  * \param lowLimitDesc (int) Lower description limit allowed
  * \param hiLimitDesc (int) Higher description limit allowed
- * \param lowLimitPrice (int) Lower price limit allowed
- * \param hiLimitPrice (int) Higher price limit allowed
+ * \param lowLimitPrice (float) Lower price limit allowed
+ * \param hiLimitPrice (float) Higher price limit allowed
  * \param lowLimitStock (int) Lower stock limit allowed
  * \param hiLimitStock (int) Higher stock limit allowed
  * \return int Return (-1) if Error [Invalid Id]
@@ -63,7 +70,7 @@ Product* product_new(void);
  */
 int product_enter(Product* pProduct,int id,int lowLimitId,int hiLimitId,\
     int lowLimitDesc,int hiLimitDesc,\
-    int lowLimitPrice,int hiLimitPrice,int lowLimitStock,int hiLimitStock);
+    float lowLimitPrice,float hiLimitPrice,int lowLimitStock,int hiLimitStock);
 
 
 /** \brief Request a description to the product, validate that it is only letters and capitalize it

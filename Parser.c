@@ -8,24 +8,24 @@
 #include "Parser.h"
 
 
-//int parserProduct(FILE* ptrFile , ArrayList* pArrayListProduct){
+//int parserProduct(FILE* pFile , ArrayList* productsList){
 //
 //    int readItem;
 //    char idStr[256],name[256],lastName[256],isEmptyStr[256];
 //    int idAux, isEmptyAux=0;
 //    int flag = 0;
 //
-//    ptrFile = fopen("data.csv","r");
-//    if (ptrFile==NULL) {
+//    pFile = fopen("data.csv","r");
+//    if (pFile==NULL) {
 //
 //        printf("\nNo se pudo abrir el archivo\n");
 //        getChar("Enter para salir: ");
 //        exit(1);
 //    }
 //
-//    while(!feof(ptrFile)){
+//    while(!feof(pFile)){
 //
-//        if(ptrFile == NULL){
+//        if(pFile == NULL){
 //
 //            printf("\nEl archivo no existe");
 //            exit(1);

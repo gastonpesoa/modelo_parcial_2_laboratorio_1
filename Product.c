@@ -10,6 +10,34 @@
 #define PRODUCT_ACTIVE  1
 
 
+void productsList_testing(ArrayList* productsList){
+
+    //Hardcodeo de productos para testing
+    Product* product0 = product_newTest(1, "Product_1", 15.50, 1500); 
+    Product* product1 = product_newTest(2, "Product_2", 11.00, 500); 
+    Product* product2 = product_newTest(3, "Product_3", 32.50, 130); 
+    Product* product3 = product_newTest(4, "Product_4", 20.50, 90); 
+    Product* product4 = product_newTest(5, "Product_5", 9.25, 420);
+
+    //Se cargan los productos al arrayList
+    if(productsList->add(productsList,product0)==-1){
+        printf("\nNo se cargo el empleado");
+    }
+    if(productsList->add(productsList,product1)==-1){
+        printf("\nNo se cargo el empleado");
+    }
+    if(productsList->add(productsList,product2)==-1){
+        printf("\nNo se cargo el empleado");
+    }
+    if(productsList->add(productsList,product3)==-1){
+        printf("\nNo se cargo el empleado");
+    }
+    if(productsList->add(productsList,product4)==-1){
+        printf("\nNo se cargo el empleado");
+    }
+}
+
+
 Product* product_newTest(int id, char* description,float price,int stock){
 
     Product* returnAux = NULL;
@@ -44,7 +72,7 @@ Product* product_new(void){
 
 int product_enter(Product* pProduct,int id,int lowLimitId,int hiLimitId,\
     int lowLimitDesc,int hiLimitDesc,\
-    int lowLimitPrice,int hiLimitPrice,int lowLimitStock,int hiLimitStock){
+    float lowLimitPrice,float hiLimitPrice,int lowLimitStock,int hiLimitStock){
 
     int returnAux = -1;
     char* descriptionAux = NULL;

@@ -55,37 +55,108 @@
 #include "Input.h"
 #include "Parser.h"
 
+#define ARCH_1 "datos.dat"
+#define ARCH_2 "temporal.dat"
+
 int main(){
 
+	//Se define puntero a estructura FILE
+	FILE* pFile;
 
-    
-    int option = 0;
+	//Se crea una lista del tipo arrayList
+	ArrayList* productsList = al_newArrayList();
+	if(productsList == NULL){
+		printf("\r\nEspacio en memoria insuficiente\r\n");
+		return 0;
+	}
 
-     while(option != 6){
+	//Hardcodeo de productos para testing
+	productsList_testing(productsList);
+
+	//Menu principal
+    int opcionMenuPrincipal = 0;
+
+    while(opcionMenuPrincipal != 6){
         
-        option = optionMainMenu();
+        opcionMenuPrincipal = optionMainMenu();
         
-        switch(option){
+        switch(opcionMenuPrincipal){
 
-            case 1: // Altas
+            case 1: //Altas
+
+            	//Se abre en modo lectura
+            	if((pFile = fopen(ARCH_1,"rb+")) == NULL){
+            		//Si el modo anterior dio error el archivo no existe, por lo tanto se crea
+            		if((pFile = fopen(ARCH_1,"wb+")) == NULL){
+            			printf("\r\nEl archivo no puede ser abierto\r\n");
+            			getChar("\r\nPresione una tecla para volver al menu principal\r\n");
+            			break;
+            		}
+            	}
+
+            	//Se crea una estructura Product de forma dinámica
+            	Product* pProduct = product_new();
+            	//Se define nuevo Id para el producto en funcion del size del arrayList
+            	int productIdAux = productsList->len(productsList);
+
+            	//Se solicitan, validan y setean los datos del producto en la estructura Product
+            	if(product_enter(pProduct, productIdAux,1,1000,1,51,0.01,9999999.99,0,9999999) == -1){
+
+            		printf("\r\nNo se pudo ingresar el nuevo producto, verifique espacio en memoria\r\n");
+            		getChar("\r\nPresione una tecla para volver al menu principal\r\n");
+            	}
+            	if(productsList->add(productsList, pProduct) == -1){
+
+            		printf("\r\nNo se pudo ingresar el nuevo producto, verifique espacio en memoria\r\n");
+            		getChar("\r\nPresione una tecla para volver al menu principal\r\n");
+            	}
+
+            	//Se desplaza el indicador de posicion al final del archivo para escribir el nuevo producto
+            	cleanStdin();
+			    fseek(pFile, 0L, SEEK_END);
+			    fwrite(productsList->get(productsList, productIdAux), sizeof(Product), 1, pFile);
+
+            	fclose(pFile);
                 
-                break;
+                break; //case 1: Altas
                 
-            case 2: // Modificar
+            case 2: //Modificar
+
+            	//Menu modificar
+            	int opcionMenuModificar = 0;
+
+            	while(opcionMenuModificar != 4){
+
+            		opcionMenuModificar = optionModifyMenu();
+
+            		switch(opcionMenuModificar){
+
+            			case 1: // Modificar descripcion
+
+            				 
+            				break;
+            			case 2: // Modificar importe
+            				break;
+            			case 3: // Modificar cantidad
+            				break;
+            			case 4: // Regresar
+            				continue;
+            		} // switch(opcionMenuModificar)
+            	} // while(opcionMenuModificar != 4)
                
-                break;
+                break; // case 2: Modificar
                 
             case 3: // Baja logica
 
-                break;
+                break; // case 3: Baja logica
 
             case 4: // Baja fisica
                 
-                break;
+                break; // case 4: Baja fisica
                 
             case 5: // Listar
                 
-                break;
+                break; // case 5: Listar
                              
             case 6: //Salir
                 continue;
