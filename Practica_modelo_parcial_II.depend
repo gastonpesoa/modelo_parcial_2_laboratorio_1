@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1529268145 source:/Volumes/Almacen/UTN/Programacion I/Practicas/Practica_modelo_parcial_II/Practica_modelo_parcial_II/ArrayList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529276025 /Volumes/Almacen/UTN/Programacion I/Practicas/Practica_modelo_parcial_II/Practica_modelo_parcial_II/ArrayList.h
+
+1529295073 source:/Volumes/Almacen/UTN/Programacion I/Practicas/Practica_modelo_parcial_II/Practica_modelo_parcial_II/Input.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"ArrayList.h"
+	"Product.h"
+	"Input.h"
+
+1529296652 /Volumes/Almacen/UTN/Programacion I/Practicas/Practica_modelo_parcial_II/Practica_modelo_parcial_II/Product.h
+
+1529294520 /Volumes/Almacen/UTN/Programacion I/Practicas/Practica_modelo_parcial_II/Practica_modelo_parcial_II/Input.h
+	<stdio.h>
+
+1529296143 source:/Volumes/Almacen/UTN/Programacion I/Practicas/Practica_modelo_parcial_II/Practica_modelo_parcial_II/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"ArrayList.h"
+	"Product.h"
+	"Input.h"
+	"Parser.h"
+
+1529296480 /Volumes/Almacen/UTN/Programacion I/Practicas/Practica_modelo_parcial_II/Practica_modelo_parcial_II/Parser.h
+
+1529296483 source:/Volumes/Almacen/UTN/Programacion I/Practicas/Practica_modelo_parcial_II/Practica_modelo_parcial_II/Parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"ArrayList.h"
+	"Product.h"
+	"Input.h"
+	"Parser.h"
+
