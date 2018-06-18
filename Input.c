@@ -12,18 +12,18 @@ int optionMainMenu(void){
     int option = 0;
 
     char menuPrinsipalMensaje[] =
-             "\n\n--------------------------------------------\
+             "\n\n============================================\
                 \n|       *      MENU PRINCIPAL      *       |\
-                \n--------------------------------------------\
+                \n============================================\
                 \n| 1 - Altas                                |\
                 \n| 2 - Modificar                            |\
                 \n| 3 - Baja logica                          |\
                 \n| 4 - Baja fisica                          |\
                 \n| 5 - Listar                               |\
                 \n| 6 - Salir                                |\
-                \n--------------------------------------------\
+                \n============================================\
                 \n| Ingrese una opcion:                      |\
-                \n--------------------------------------------\n";
+                \n============================================\n";
 
     char menuPrinsipalMensajeError[] = "\nSe debe elegir una opcion del 1 al 6";
 
@@ -38,16 +38,16 @@ int optionModifyMenu(void){
     int option = 0;
     
     char menuModificarProductMensaje[] =
-             "\n\n--------------------------------------------\
+             "\n\n============================================\
                 \n|       *      MENU MODIFICAR      *       |\
-                \n--------------------------------------------\
+                \n============================================\
                 \n| 1 - Modificar descripcion                |\
                 \n| 2 - Modificar importe                    |\
                 \n| 3 - Modificar cantidad                   |\
                 \n| 4 - Regresar                             |\
-                \n--------------------------------------------\
+                \n============================================\
                 \n| Ingrese una opcion:                      |\
-                \n--------------------------------------------\n";
+                \n============================================\n";
     
     char menuModificarProductMensajeError[] = "\nSe debe elegir una opcion del 1 al 4";
     
