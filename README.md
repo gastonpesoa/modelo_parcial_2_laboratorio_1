@@ -1,7 +1,7 @@
 # modelo_parcial_2_laboratorio_1
 Modelo del parcial del segundo cuatrimestre del 2015 de la materia Laboratorio de computación I UTN FRA
 
-/*****************************************************************************************************************************************
+/**************************************************************************************************************
 
  Programación I – Laboratorio I
  Programa: Modelo parcial segundo cuatrimestre 2015
@@ -46,4 +46,4 @@ Modelo del parcial del segundo cuatrimestre del 2015 de la materia Laboratorio d
 Version: 0.1 del 18 de junio de 2018
 Autor: Gaston Pesoa
 
-*****************************************************************************************************************************************/
+********************************************************************************************************************/
